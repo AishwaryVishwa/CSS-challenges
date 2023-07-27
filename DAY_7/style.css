@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif ;
+}
+body{
+    background-color: #264057;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.header{
+    background-color: #5F98CD;
+    height: 80px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.frame{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    box-shadow: 2px 2px 30px rgb(0, 0, 0);
+}
+svg{
+    width: 47px;
+    height: 38px;
+}
+#menu{
+    position: relative;
+    z-index: 10;
+    transition: all 1ms;
+    transition-timing-function: ease-in-out;
+}
+#menu:hover{
+    
+}
+#input{
+    transition: all 0.5s;
+    height: 40px;
+    width: 300px;
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    left: 50px;
+    opacity: 0;
+    padding-left:28px; 
+    font-size: 20px;
+    transform: scale(0);
+}
+#input:focus{
+    outline: none;
+}
+
+a{
+    font-size: 20px;
+}
+.title{
+    color:  #B2DAFF;
+    font-size: 30px;
+    font-family: 'Fredoka', sans-serif;
+    
+}
+#search{
+    background-color: #5F98CD;
+    border: none;
+    height: 30px;
+    font-size: 20px;
+    color:  #dde5ec;
+    padding: 6px 7px;
+}
+
+.horiLine{
+    height: 320px;
+    width: 5px;
+    background-color: #43576b3a;
+    position: absolute;
+    left: 34px;
+}
+.circle{
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 3px solid rgb(132, 100, 223);
+    outline: 4px solid rgb(250, 249, 248);
+    display: inline-block;
+    background-color: white;
+}
+.noti1{
+    position: absolute;
+    left: 30px;
+    top: 100px;
+}
+.noti2{
+    position: absolute;
+    left: 30px;
+    top: 200px;
+}
+.noti3{
+    position: absolute;
+    left: 30px;
+    top: 300px;
+}
+.time{
+    position: relative;
+    left: 10px;
+    font-size: 20px;
+}
+.msg{
+    position: relative;
+    left: 27px;
+}
+.notis{
+    font-size: 23px;
+    color: rgba(32, 33, 36, 0.5);
+    left: 29px;
+}
+.notis:hover{
+    color: #5F98CD;
+}
+#backpage{
+    height:350px;
+    width: 300px;
+    border: 1px solid yellow;
+    background-color: #0c283f;
+    /* transform: translateX(100%); */
+    position: absolute;
+    /* transform: translateX(0%); */
+    transition: all 0.8s;
+}
+.list{
+    list-style: square;
+    color: #dde5ec;
+}
+.items{
+    padding: 20px;
+    margin: 5px;
+
+}
+.items:hover{
+   background-color: #1d3d57;
+}

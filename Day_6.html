@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        transition: all 1s;
+    }
+    body{
+        height: 100vh;
+        margin: 0%;
+        padding: 0%;
+        background-image: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+     .frame{
+         height: 360px;
+         width: 360px;
+         background-color: aliceblue;
+         display: grid;
+         grid-template-columns: 225px 135px;
+         grid-template-rows: repeat(118,3);
+         row-gap: 1px;
+         border-radius: 4px;
+         box-shadow:6px 6px 15px rgba(0, 0, 0, 0.473) ;
+     }
+     .circle{
+         height: 90px;
+         width: 90px;
+         /* background-color: coral; */
+         background-image: url(marshamallow.jpg);
+         border-radius: 50%;
+        position: relative;
+        top: 20px;
+        left: 20px;
+     }
+     .sidebars{
+         
+         background-color: rgba(184, 153, 153, 0.479);
+     }
+     .sidebars:hover{
+        
+         background-color: rgba(184, 153, 153, 0.822);
+     }
+     .fullbar{
+        
+         grid-row-start: 1;
+         grid-row-end: 4;
+     }
+     
+     #iner1{
+         padding: 0%;
+        height: 100px;
+        width: 100px;
+        
+        border:1px solid #CA7C4E;
+        border-left:1px solid aliceblue;
+        
+        border-radius: 50%;
+        position: relative;
+        top: -75px;
+        left: 15px;
+    }
+     #iner2{
+        height: 110px;
+        width: 110px;
+        
+        border:1px solid #CA7C4E;
+        border-right:1px solid aliceblue;
+       
+        border-radius: 50%;
+        position: relative;
+        top: -180px;
+        left: 10px;
+        
+     }
+     
+     .image{
+         height:132px;
+         width: 132px;
+         margin: 28px 46px;
+         /* border: 1px solid black; */
+     }
+     #name{
+         position: relative;
+         bottom:38px;
+         left: 51px;
+         font-size: 19px;
+         font-weight: bolder;
+     }
+     #prof{
+        position: relative;
+         bottom:10px;
+         left: -48px;
+         font-size: 10px;
+         font-weight: bolder;
+     }
+     span{
+         color: #8a5436;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+     .btn{
+         height: 34px;
+         width: 100px;
+         color: #8a5436;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         border-radius: 25px;
+         border: 1px solid #8a5436;
+         font-size: 16px;
+     }
+     .btn:hover{
+         
+         color: #e7e1dd;
+        
+        background-color: #8a5436;
+     }
+     #btn1{
+ position: relative;
+ top: 18px;
+ left: 60px;
+     }
+     #btn2{
+        position: relative;
+ top: 72px;
+ left: -40px;
+        }
+
+</style>
+<body>
+    <div class="frame">
+        <div class="fullbar">
+            <div class="image"  id="img" onmouseover="onHover()"  onmouseout="outHower()">
+                <div class="circle">
+                    <!-- <img src="images\jaipur2.jpg" alt=""> -->
+                </div>
+                <div id="iner1"  class="border"></div>
+                <div id="iner2" class="border"></div>
+
+            </div>
+            <span id="name">Jessica Pottter</span>
+            <span id="prof">Visual Artist</span>
+            <button class="btn" id="btn1">Follow</button>
+            <button class="btn" id="btn2">Message</button>
+        </div>
+        <div class="sidebars">
+              
+        </div>
+        <div class="sidebars">
+
+        </div>
+        <div class="sidebars">
+          
+
+        </div>
+    </div>
+</body>
+<script>
+
+ function onHover()
+ {
+//    iner1.style.border="black";
+   iner1.style.transform="rotate(360deg)";
+   iner2.style.transform="rotate(-360deg)";
+ }
+ function outHower()
+ {
+   iner1.style.transform="rotate(0deg)";
+   iner2.style.transform="rotate(0deg)";
+ }
+   
+</script>
+</html>

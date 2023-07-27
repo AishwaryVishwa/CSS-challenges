@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        transition: all 1s;
+    }
+    body{
+        margin: 0%;
+        padding: 0%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(24, 20, 20);
+        
+    }
+    .circle{
+        background-color: rgb(178, 137, 216);
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: -3;
+    }
+    #sun{
+        position: relative;
+        left: -88px;
+        top: 277px;
+        height: 100px;
+        width: 100px;
+        background-color: rgb(236, 240, 9);
+        border-radius: 50%;
+        transform-origin: 300% 50%;
+        animation: sun;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        z-index: 5;
+    }
+    #pyramid{
+        height: 0%;
+        width: 0%;
+        border: 120px solid whitesmoke;
+        transform: rotate(45deg);
+        position: relative;
+        left: 108px;
+        top: 124px;
+        z-index: -1;
+        border-top: 48px solid rgb(241, 216, 216);
+        /* border-left: 120px solid yellow; */
+        animation-name: pyramid_shadow;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    #land{
+       background-color: yellowgreen;
+       height: 200px;
+       width: 500px;
+       z-index: 1;
+       position: relative;
+       top: 14px;
+    }
+    #shadow{
+    z-index: 2;
+    position: relative;
+    height: 154px;
+    bottom: 186px;
+    left: 2px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 23%, 100% 23%);
+    background-color: rgba(27, 27, 34, 0.534);
+    animation-name: shadow;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    }
+    @keyframes sun{
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(90deg);
+        }
+        100%{
+            /* height: 78px; */
+            transform: rotate(180deg);
+        }
+    }
+    @keyframes shadow{
+        0%{
+            
+        }
+        50%{
+           position: relative;
+           height: 154px;
+           bottom: 186px;
+           left: 6px;
+           clip-path: polygon(19% 0%, 79% 0%, 52% 27%, 52% 27%);
+        }
+        100%{
+            position: relative;
+            height: 154px;
+            bottom: 186px;
+            left: 7px;
+            clip-path: polygon(20% 0%, 80% 0%, 1% 23%, 1% 23%);
+        }
+    }
+    @keyframes pyramid_shadow{
+        0%{
+            border-top: 48px solid rgb(126, 109, 109);
+        }
+        45%{
+            border-top: 48px solid rgb(206, 180, 180);
+        }
+        55%{
+            border-left: 120px solid rgba(185, 154, 154, 0.808);
+        }
+        100%{
+            border-top: 48px solid rgba(245, 245, 245, 0.712);
+            border-left: 120px solid rgba(126, 109, 109, 0.664);
+        }
+    }
+</style>
+<body>
+    <div class="circle">
+        <div id="sun"></div>
+        <div id="pyramid"></div>
+        <div id="land"></div>
+        <div id="shadow"></div>
+    </div>
+</body>
+</html>

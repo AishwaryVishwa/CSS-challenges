@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0%;
+        padding: 0%;
+        height: 100vh;
+        background-color: rgb(199, 29, 57);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .outer{
+        height: 200px;
+        width: 200px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+        position: absolute;
+        left: 40%;
+        animation-name: outer;
+        animation-duration: 2s;
+        /* animation-delay: 1s; */
+        animation-fill-mode: both;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        /* animation-timing-function: cubic-bezier(.21,.98,.6,.99); */
+        animation-timing-function: ease;
+    }
+    .iner1{
+         height: 130px;
+         width: 130px;
+         background-color: rgb(255, 254, 254);
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         z-index: 0;
+         position: absolute;
+         left: 42.7%;
+         animation-name: iner1;
+        animation-duration:2s;
+        /* animation-delay: 1s; */
+        animation-direction: alternate;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        /* animation-timing-function: cubic-bezier(.21,.98,.6,.99); */
+        animation-timing-function: ease;
+    }
+    .iner2{
+         height: 60px;
+         width: 60px;
+         background-color:rgb(251, 250, 252);
+         border-radius: 50%;
+         z-index: 1;
+         position: absolute;
+         left: 45.4%;
+        animation-name: iner2;
+        animation-duration: 2s;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        /* animation-timing-function: cubic-bezier(.21,.98,.6,.99); */
+        animation-timing-function: ease;
+    }
+    .div{
+        /* box-shadow: 20px 10px 30px rgba(0, 0, 0, 0.548); */
+        margin: 20px;
+    }
+    @keyframes outer{
+        0%{
+            box-shadow: 24px 14px 25px rgba(0, 0, 0, 0.377) ;
+            transform: scale(0);
+
+        }
+        50%{
+            box-shadow: 24px 14px 35px rgba(0, 0, 0, 0.582) ;
+        }
+        100%{
+            box-shadow: 24px 14px 45px rgba(0, 0, 0, 0.637) ;
+            transform: scale(1);
+        }
+    }
+    @keyframes iner2{
+        0%,70%{
+            transform: scale(0);
+            box-shadow: 24px 14px 25px rgba(0, 0, 0, 0.377) ;
+        }
+        100%{
+            transform: scale(1);
+            box-shadow: 24px 14px 45px rgba(0, 0, 0, 0.637) ;
+        }
+    }
+    @keyframes iner1{
+        0%,40%{
+            transform: scale(0);
+            box-shadow: 24px 14px 25px rgba(0, 0, 0, 0.377) ;
+        }
+        100%{
+            transform: scale(1);
+            box-shadow: 24px 14px 45px rgba(0, 0, 0, 0.493) ;
+        }
+    }
+</style>
+<body>
+   <div class="outer div"></div>
+   <div class="iner1 div"></div>
+   <div class="iner2 div"></div>
+</body>
+</html>

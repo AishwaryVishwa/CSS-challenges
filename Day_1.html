@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+    }
+    /* styling body with background */
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(45deg,rgb(32, 50, 151),rgb(216, 216, 235));   
+    }
+    /* decorating frame */
+
+    #frame{
+        padding-left: 20px;
+        height:450px;
+        width: 500px;
+    }
+    /* styling the numbers of 100 */
+
+    .number{
+        background-color: white;
+        display: inline-block;
+        border-radius: 4px;
+        box-shadow: 1px 2px 18px  rgba(0, 0, 0, 0.253);
+    }
+    
+    .small-1{
+        position: relative;
+        bottom: 90px;
+        left: 10px;
+        transform: rotate(42deg);
+        height: 79px;
+        width: 35px;
+        z-index: -1;
+    }
+    .large-1{
+        background-color: white;
+         height: 170px;
+         width: 43px;
+         z-index: 1;
+    }
+    #zero1{
+        position: relative;
+        right: 15px;
+        z-index: -1;
+    }
+    #zero2{
+        position: relative;
+        right: 47px;
+        z-index: -2;
+    }
+    .zero{
+        background-color: white;
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+    }
+    .iner{
+         position: relative;
+         top: 41px;
+         margin: auto;
+         background-color: rgba(96, 104, 151, 0.719);
+         height: 50%;
+         width: 50%;
+         border-radius: 50%;
+    }
+    #iner1{
+        background-color: rgba(84, 97, 175, 0.719);
+    }
+    #iner2{
+        background-color: rgba(113, 122, 172, 0.719);
+    }
+    #days{
+        font-size: 139px;
+    }
+    .text{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: white;
+        position: relative;
+        left: 25px;
+    }
+    p{
+        font-size: 41px;
+        word-spacing: 20px;
+        letter-spacing: 6px;
+    }
+</style>
+<body>
+    <div id="frame">
+        <div class="small-1 number"></div>
+        <div class="large-1 number"></div>
+        <div class="number zero" id="zero1">
+            <div class="iner" id="iner1">
+
+            </div>
+        </div>
+        <div class="number zero" id="zero2">
+            <div class="iner" id="iner2">
+
+            </div>
+        </div>
+        <div class="text" id="days">DAYS</div>
+        <P class="text" >CSS Challenge</P>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        transition: all 10s;
+    }
+    body{
+        margin: 0%;
+        padding: 0%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(45deg,rgb(24, 206, 24) ,rgb(194, 129, 129));
+    }
+    .container{
+        
+        /* height: 190px;
+        width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; */
+        /* border: 1px solid rgb(209, 197, 197); */
+        /* margin-top: 100px; */
+
+        /* border: 1px solid white; */
+        height: 160px;
+        width: 250px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .lines{
+        height: 30px;
+        width: 100%;
+        background-color: white; 
+        border-radius: 10px;
+        box-shadow: 1px 1px 19px rgba(0, 0, 0, 0.404);
+    }
+    #line1{
+       z-index: 0;
+     }
+    #line2{
+       z-index: -1;
+    }
+    #line3{
+       z-index: 2;
+    }
+    .container:hover{
+        cursor: pointer;
+    }
+     #line1{
+        animation-name: animateL1;
+       animation-duration: 1s;
+       animation-direction:alternate;
+       animation-timing-function: ease-out;
+       animation-fill-mode: both;
+       /* animation-timing-function: ease-in; */
+       animation-iteration-count: infinite;
+    }
+    
+     #line2{
+        animation-name: animateL2;
+       animation-duration: 1s;
+       animation-direction:alternate;
+       animation-timing-function: ease-out;
+       animation-iteration-count: infinite;
+       animation-fill-mode: both;
+    }
+     #line3{
+        animation-name: animateL3;
+       animation-duration: 1s;
+       animation-direction:alternate;
+       animation-timing-function: ease-out;
+       animation-iteration-count: infinite;
+       animation-fill-mode: both;
+    }
+    @keyframes animateL1{
+        0%{
+            position: relative;
+            top: 0px;
+            transform: rotate(0deg);
+        }
+        50%{
+            position: relative;
+            top: 70px;
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotateZ(45deg);
+            position: relative;
+            top: 84px;
+        }
+    }
+    @keyframes animateL2{
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(0);
+        }
+        100%{
+            transform: scale(0);
+        }
+        
+    }
+    @keyframes animateL3{
+        0%{
+           position: relative;
+           bottom: 0px;
+           transform: rotate(0deg);
+        }
+        50%{
+           position: relative;
+           bottom: 60px;
+           transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(-45deg);
+            position: relative;
+            bottom: 45px;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="lines" id="line1"></div>
+        <div class="lines" id="line2"></div>
+        <div class="lines" id="line3"></div>
+    </div>
+</body>
+</html>

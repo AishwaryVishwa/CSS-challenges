@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f2f42b0582.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+    <title>Day7</title>
+</head>
+
+<body>
+    <div id="backpage">
+        <ul class="list">
+            <li class="items">Profile</li>
+            <li class="items">Account</li>
+            <li class="items">Points</li>
+            <li class="items">Chats</li>
+            <li class="items">About</li>
+        </ul>
+    </div>
+
+    <div class="frame">
+        <div class="header">
+            <div id="svg">
+
+                <svg id="menu" width="213" height="180" viewBox="0 0 213 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="213" height="180" fill="#9E3535"/>
+                    <rect width="213" height="180" fill="#5F98CD"/>
+                    <rect x="32" y="59" width="107" height="21" rx="10.5" fill="#C4C4C4"/>
+                    <ellipse cx="162" cy="69.5" rx="18" ry="17.5" fill="#C4C4C4"/>
+                    <rect x="32" y="107" width="148" height="21" rx="10.5" fill="#C4C4C4"/>
+                </svg>
+            </div>
+                      
+            <span  id="noti" class="title">Notifications</span>
+            <input id="input" type="text" placeholder="Search here..">
+           <button id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+           </button>
+             
+        </div>
+
+        <div class="horiLine">
+
+        </div>
+       
+        <div class="noti1 notis">
+            <div class="circle"></div>
+            <span class="time">
+                9:45 AM
+            </span>
+            <br>
+            <span class="msg">
+               <b> John walker </b> posted a photo of yours.
+            </span>
+        </div>
+        <div class="noti2 notis">
+            <div class="circle"></div>
+            <span class="time">
+                8:00 AM
+            </span>
+            <br>
+            <span class="msg">
+               <b> Alice Parker </b> commented.
+            </span>
+        </div>
+        <div class="noti3 notis">
+            <div class="circle"></div>
+            <span class="time">
+                9:00 AM
+            </span>
+            <br>
+            <span class="msg"">
+               <b> Aish </b> sent you a message.
+            </span>
+        </div>
+    </div>
+
+    <script>
+        let input=document.getElementById('input')
+        search.addEventListener("click",showBAR);
+        
+        function showBAR()
+        {
+            if(input.style.opacity!="1")
+            {
+                
+                menu.style.opacity="0";
+                input.style.opacity="1";
+                input.style.transform="translateX(-20px)"
+            }
+            else
+            {
+            // menu.style.zIndex="0";
+            input.style.opacity="0";
+            input.style.transform="translateX(0px)"
+            menu.style.opacity="1";
+            menu.style.zIndex="10";
+            }
+        }
+          
+
+        let backpage=document.getElementById('backpage');
+        let menu=document.getElementById('menu');
+         
+         menu.addEventListener('click',showBack);
+         function showBack()
+         {
+             if(backpage.style.transform!="translateX(-100%)")
+             {
+                backpage.style.transform="translateX(-100%)";
+             }
+             else{
+                backpage.style.transform="translateX(0%)"
+             }
+         }
+
+       
+    </script>
+</body>
+</html>
